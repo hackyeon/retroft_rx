@@ -5,7 +5,7 @@ import com.hackyeon.retrofit_rx.api.network.forAndroid.RetrofitNetworkRequest
 import io.reactivex.Observable
 
 class NetworkProvider {
-
+    
     private val provider = NetworkProviderFactory.make()
 
     fun <T, U> requestJsonObject(requestObject: T): Observable<U> {

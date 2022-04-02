@@ -35,6 +35,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        disposeBag.clear()
+    }
+
     private fun Disposable.disposeBy(disposeBag: CompositeDisposable) {
         disposeBag.add(this)
     }

@@ -7,7 +7,6 @@ import io.reactivex.Scheduler
 import io.reactivex.schedulers.Schedulers
 
 class API {
-
     companion object{
         fun <T, U> request(requestObject: T): Observable<U> {
             return Observable.just(requestObject)
@@ -15,5 +14,4 @@ class API {
                 .flatMap { NetworkProvider().requestJsonObject<T, U>(it) }
         }
     }
-
 }
